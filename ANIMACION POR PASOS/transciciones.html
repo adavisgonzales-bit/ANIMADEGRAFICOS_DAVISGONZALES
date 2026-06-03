@@ -1,0 +1,315 @@
+<html>
+<head>
+    <title>Presentacion</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .contenedor{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid black;
+            margin:0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #000000);
+        }
+        .marco1, .marco2, .marco3, .marco4, .marco5{
+            box-shadow: 0px 0px 20px rgb(145, 255, 0);
+        }
+        .marco1{
+            width: 200px;
+            height: 300px;
+            background-color: red;
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            animation: marco1 3s 1 forwards;
+            background-image: url(imgs/img1.jpg);
+            background-size: cover;
+            box-shadow: 0px 0px 30px rgb(255, 0, 0), 0px 0px 60px rgba(255, 0, 0, 0.5);
+            border: 2px solid rgb(255, 0, 0);
+
+        }
+        @keyframes marco1{
+            0%{
+                top: 150px;
+                left: 400px;
+                opacity: 0;
+                transform: scale(0.3) rotate(0deg);
+            }
+            25%{
+                top: 0px;
+                left: 700px;
+                transform: scale(0.8) rotate(90deg);
+                opacity: 0.5;
+            }
+            50%{
+                top: 200px;
+                left: 800px;
+                transform: scale(1) rotate(180deg);
+                opacity: 0.8;
+            }
+            75%{
+                top: 0px;
+                left: 200px;
+                transform: scale(1.1) rotate(270deg);
+                opacity: 0.95;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+                transform: scale(1) rotate(360deg);
+                opacity: 1;
+            }
+        }
+        .marco2{
+            width: 200px;
+            height: 300px;
+            background-color: rgb(0, 255, 21);
+
+            position: absolute;
+            top: 0px;
+            left: 200px;
+            background-image: url(imgs/img5.jpeg);
+            background-size: cover;
+            animation: marco2 3s 1 forwards;
+            animation-delay: 1s;
+            opacity: 0;
+            box-shadow: 0px 0px 30px rgb(0, 255, 0), 0px 0px 60px rgba(0, 255, 0, 0.5);
+            border: 2px solid rgb(0, 255, 0);
+        }
+        @keyframes marco2{
+            0%{
+                top: 100px;
+                left: 300px;
+                transform: rotate(-30deg);
+                opacity: 0;
+            }
+            20%{
+                top: 0px;
+                left: 600px;
+                transform: rotate(45deg);
+                opacity: 0.4;
+            }
+            40%{
+                top: 250px;
+                left: 800px;
+                transform: rotate(-20deg);
+                opacity: 0.7;
+            }
+            60%{
+                top: 50px;
+                left: 500px;
+                transform: rotate(60deg);
+                opacity: 0.9;
+            }
+            80%{
+                top: 200px;
+                left: 300px;
+                transform: rotate(-40deg);
+                opacity: 1;
+            }
+            100%{
+                top: 0px;
+                left: 200px;
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+        }
+        .marco3{
+            width: 200px;
+            height: 300px;
+            background-color: rgb(25, 0, 255);
+
+            position: absolute;
+            top: 0px;
+            left: 400px;
+            animation: marco3 3.5s 1 forwards;
+            animation-delay: 2s;
+            opacity: 0;
+            background-image: url(imgs/img3.jpg);
+            background-size: cover;
+            box-shadow: 0px 0px 30px rgb(0, 0, 255), 0px 0px 60px rgba(0, 0, 255, 0.5);
+            border: 2px solid rgb(0, 0, 255);
+        }
+        @keyframes marco3{
+            0%{
+                top: 200px;
+                left: 200px;
+                transform: scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+            25%{
+                top: 0px;
+                left: 700px;
+                transform: scale(0.7) rotate(120deg);
+                opacity: 0.5;
+            }
+            50%{
+                top: 250px;
+                left: 800px;
+                transform: scale(0.9) rotate(240deg);
+                opacity: 0.8;
+            }
+            75%{
+                top: 50px;
+                left: 400px;
+                transform: scale(1) rotate(360deg);
+                opacity: 0.95;
+            }
+            100%{
+                top: 0px;
+                left: 400px;
+                transform: scale(1) rotate(360deg);
+                opacity: 1;
+            }
+        }
+        .marco4{
+            width: 200px;
+            height: 300px;
+            background-color: rgb(255, 0, 200);
+
+            position: absolute;
+            top: 0px;
+            left: 600px;
+            animation: marco4 3.2s 1 forwards;
+            animation-delay: 3s;
+            opacity: 0;
+            background-image: url(imgs/img4.jpeg);
+            background-size: cover;
+            box-shadow: 0px 0px 30px rgb(255, 0, 255), 0px 0px 60px rgba(255, 0, 255, 0.5);
+            border: 2px solid rgb(255, 0, 255);
+        }
+        @keyframes marco4{
+            0%{
+                top: 50px;
+                left: 500px;
+                transform: translateY(0);
+                opacity: 0;
+            }
+            25%{
+                top: 0px;
+                left: 700px;
+                transform: translateY(-30px);
+                opacity: 0.4;
+            }
+            50%{
+                top: 250px;
+                left: 800px;
+                transform: translateY(40px);
+                opacity: 0.7;
+            }
+            75%{
+                top: 100px;
+                left: 400px;
+                transform: translateY(-20px);
+                opacity: 0.9;
+            }
+            100%{
+                top: 0px;
+                left: 600px;
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .marco5{
+            width: 200px;
+            height: 300px;
+            background-color: rgb(255, 165, 0);
+
+            position: absolute;
+            top: 0px;
+            left: 800px;
+            animation: marco5 3.8s 1 forwards;
+            animation-delay: 4s;
+            opacity: 0;
+            background-image: url(imgs/img2.jpg);
+            background-size: cover;
+            box-shadow: 0px 0px 30px rgb(255, 165, 0), 0px 0px 60px rgba(255, 165, 0, 0.5);
+            border: 2px solid rgb(255, 165, 0);
+        }
+        @keyframes marco5{
+            0%{
+                top: 200px;
+                left: 100px;
+                transform: rotate(0deg);
+                opacity: 0;
+            }
+            20%{
+                top: 0px;
+                left: 500px;
+                transform: rotate(60deg);
+                opacity: 0.4;
+            }
+            40%{
+                top: 250px;
+                left: 700px;
+                transform: rotate(120deg);
+                opacity: 0.7;
+            }
+            60%{
+                top: 50px;
+                left: 800px;
+                transform: rotate(180deg);
+                opacity: 0.9;
+            }
+            80%{
+                top: 150px;
+                left: 500px;
+                transform: rotate(240deg);
+                opacity: 1;
+            }
+            100%{
+                top: 0px;
+                left: 800px;
+                transform: rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        .texto-simple {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            animation: subirSimple 2s ease-out forwards;
+            animation-delay: 5s;
+            opacity: 0;
+            z-index: 100;
+        }
+
+        @keyframes subirSimple {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+            }
+            100% {
+                bottom: 50%;
+                transform: translateY(50%);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class = "contenedor">
+        <div class = "marco1"></div>
+        <div class = "marco2"></div>
+        <div class = "marco3"></div>
+        <div class = "marco4"></div>
+        <div class = "marco5"></div>
+        
+        <div class="texto-simple">TECNOLOGIAS DE DESARROLLO WEB</div>
+    </div>
+
+</body>
+</html>
