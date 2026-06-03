@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parallax - Acercamiento fuerte de todo el escenario</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a1a2a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .contenedor {
+            width: 1300px;
+            height: 760px;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-image: url(img/1.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            /* El contenedor se acerca MUCHO (15%) de una sola vez */
+            animation: acercarContenedor 2.5s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+        }
+
+        /* ARBUSTO (img/2.2.png) - se acerca y se queda */
+        .marco1 {
+            top: -100px;
+            left: 0px;
+            position: absolute;
+            width: 1300px;
+            height: 1000px;
+            background-image: url(img/2.2.png);
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            animation: acercarArbusto 2.5s ease-out forwards;
+        }
+
+        /* CÍRCULO / PERSONAJE (img/3.3.png) - acercamiento fuerte */
+        .marco2 {
+            top: 400px;
+            left: 450px;
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            background-image: url(img/3.3.png);
+            clip-path: circle(50% at 50% 50%);
+            z-index: 2;
+            animation: acercarPersonaje 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        /* FONDO (img/4.4.png) - acercamiento suave */
+        .marco3 {
+            top: -150px;
+            left: 100px;
+            position: absolute;
+            width: 1300px;
+            height: 400px;
+            background-image: url(img/4.4.png);
+            background-size: cover;
+            z-index: 0;
+            animation: acercarFondo 3s ease-out forwards;
+        }
+
+        /* ===== TODAS LAS ANIMACIONES SON DE UNA SOLA VEZ (forwards) ===== */
+        
+        /* CONTENEDOR: zoom MUY FUERTE (15% - escala 1 → 1.15) */
+        @keyframes acercarContenedor {
+            0% {
+                transform: scale(1);
+                filter: brightness(1);
+                border-radius: 20px;
+            }
+            100% {
+                transform: scale(1.15);
+                filter: brightness(1.1);
+                border-radius: 8px;
+            }
+        }
+
+        /* Arbusto: escala 1 → 1.3 (30%) */
+        @keyframes acercarArbusto {
+            0% {
+                transform: scale(1) translate(0px, 0px);
+            }
+            100% {
+                transform: scale(1.3) translate(-10px, -8px);
+            }
+        }
+
+        /* Personaje: escala 1 → 1.5 (50%) */
+        @keyframes acercarPersonaje {
+            0% {
+                transform: scale(1) translate(0px, 0px);
+            }
+            100% {
+                transform: scale(1.5) translate(8px, -5px);
+            }
+        }
+
+        /* Fondo: escala 1 → 1.05 (5%) */
+        @keyframes acercarFondo {
+            0% {
+                transform: scale(1) translateY(0px);
+            }
+            100% {
+                transform: scale(1.05) translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor">
+    <div class="marco1"></div>
+    <div class="marco2"></div>
+    <div class="marco3"></div>
+</div>
+</body>
+</html>
